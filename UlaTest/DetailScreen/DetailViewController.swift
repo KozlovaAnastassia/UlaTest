@@ -36,18 +36,9 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addViews()
+        setUpViews()
         setupLayout()
-        state = .loading
-        view.backgroundColor = .white
-
-        DispatchQueue.main.async {
-            if let url = URL(string: self.stringURL) {
-                let request = URLRequest(url: url)
-                self.webView.load(request)
-                self.state = .loaded
-            }
-        }
+        openApp(stringURL: stringURL)
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,7 +49,10 @@ final class DetailViewController: UIViewController {
 
     //MARK: -> Functions
     
-    private func addViews(){
+    private func setUpViews(){
+        state = .loading
+        view.backgroundColor = .white
+        
         view.addSubviews(
             webView,
             DetailViewController.errorLabel,
@@ -77,7 +71,36 @@ final class DetailViewController: UIViewController {
             webView.bottomAnchor.constraint(equalTo: margins.bottomAnchor)
         ])
     }
-        
+    private func getAppUrl(url: String) -> URL? {
+        if let appURLString = Formuls.extractWordFromURL(urlString: url) {
+            let appURL = URL(string: appURLString)
+            return appURL
+        }
+        return nil
+    }
+    
+    private func openApp(stringURL: String) {
+        if isAppInstalled(url: stringURL) {
+            if let appURL = getAppUrl(url: stringURL), UIApplication.shared.canOpenURL(appURL) {
+                    UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+            }
+        } else {
+            DispatchQueue.main.async { [weak self] in
+                if let url = URL(string: stringURL) {
+                    let request = URLRequest(url: url)
+                    self?.webView.load(request)
+                    self?.state = .loaded
+                }
+            }
+        }
+    }
+    
+    private func isAppInstalled(url: String) -> Bool {
+        if let appURL = getAppUrl(url: url) {
+            return UIApplication.shared.canOpenURL(appURL)
+        }
+        return false
+    }
 }
 
 

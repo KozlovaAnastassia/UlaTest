@@ -25,6 +25,7 @@
 		5D3C96CB2BB9D92500F4642A /* UIViewController + Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3C96CA2BB9D92500F4642A /* UIViewController + Extension .swift */; };
 		5D3C96CD2BB9DC6F00F4642A /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3C96CC2BB9DC6F00F4642A /* UIView + Extension.swift */; };
 		5D3C96D02BB9DD2D00F4642A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3C96CF2BB9DD2D00F4642A /* Constants.swift */; };
+		5D3C96D22BB9EB6800F4642A /* Formuls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3C96D12BB9EB6800F4642A /* Formuls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		5D3C96CA2BB9D92500F4642A /* UIViewController + Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension .swift"; sourceTree = "<group>"; };
 		5D3C96CC2BB9DC6F00F4642A /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		5D3C96CF2BB9DD2D00F4642A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5D3C96D12BB9EB6800F4642A /* Formuls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formuls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				5D3C96C62BB9D1C500F4642A /* ScreenState.swift */,
 				5D3C96CF2BB9DD2D00F4642A /* Constants.swift */,
+				5D3C96D12BB9EB6800F4642A /* Formuls.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				5D3C96B82BB9B9D100F4642A /* NetworkService.swift in Sources */,
 				5D3C96A02BB9A22F00F4642A /* ServiceViewController.swift in Sources */,
 				5D3C96B62BB9B63900F4642A /* ImageCash.swift in Sources */,
+				5D3C96D22BB9EB6800F4642A /* Formuls.swift in Sources */,
 				5D3C96B02BB9A2EB00F4642A /* ServiceCell.swift in Sources */,
 				5D3C969C2BB9A22F00F4642A /* AppDelegate.swift in Sources */,
 				5D3C969E2BB9A22F00F4642A /* SceneDelegate.swift in Sources */,

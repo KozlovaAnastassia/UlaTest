@@ -60,8 +60,8 @@ final class ServiceViewController: UITableViewController {
             self?.state = .loaded
             self?.tableView.reloadData()
         }
-        viewModel.error = {
-            self.state = .failure
+        viewModel.error = { [weak self] in
+            self?.state = .failure
         }
     }
     

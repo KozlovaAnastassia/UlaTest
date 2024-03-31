@@ -11,19 +11,19 @@ extension UIViewController {
     
     static var activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
-        indicator.color = UIColor.green
+        indicator.color = UIColor.systemBlue
         indicator.isHidden = true
         return indicator
     }()
     
     static var errorLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = Constants.Errors.serviceError
         label.translatesAutoresizingMaskIntoConstraints = false
-       label.numberOfLines = .zero
-       label.textColor = .white
-       label.isHidden = true
-       return label
+        label.numberOfLines = .zero
+        label.textColor = .white
+        label.isHidden = true
+        return label
    }()
     
      func failureScreeen() {
